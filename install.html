@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="canonical" href="https://pharmashift.ir/install.html">
+<title>دانلود و نصب فارماشیفت</title>
+<meta name="description" content="فارماشیفت رو روی گوشی اندروید یا آیفونت نصب کن.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2230%22 fill=%22%230b6e66%22/></svg>">
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f3f3f4;--cd:#fff;--ln:#e1e7e7;--tx:#18262b;--mu:#667a80;--pr:#0b6e66;--ac:#58e0cd;--soft:#e4f3f1}
+@media(prefers-color-scheme:dark){:root{--bg:#101213;--cd:#1b1f20;--ln:#2b3335;--tx:#e6eeee;--mu:#93a8ac;--pr:#2bb5a8;--soft:#1a2b2a}}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+:root{padding-bottom:env(safe-area-inset-bottom,0px)}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.9 Vazirmatn,Tahoma,sans-serif;min-height:100vh}
+a{color:inherit}
+header.top{position:sticky;top:0;z-index:20;background:#06201fcc;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);padding-top:env(safe-area-inset-top,0px)}
+header.top .w{display:flex;justify-content:space-between;align-items:center;padding-top:10px;padding-bottom:10px}
+.w{max-width:620px;margin:0 auto;padding:0 20px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:900;font-size:19px;color:#fff;text-decoration:none}
+.brand i{width:34px;height:34px;border-radius:10px;background:#0b6e66;display:block;color:#fff}.brand svg{width:100%;height:100%;display:block}
+.back{color:#b9d4d0;text-decoration:none;font-size:14px;font-weight:600}
+.hero{background:radial-gradient(700px 420px at 85% 0,#0f6b62 0,transparent 60%),#06201f;color:#fff;padding:34px 0 84px;text-align:center}
+.hero h1{margin:0;font-size:32px;line-height:1.5;font-weight:900}
+.hero p{margin:8px auto 0;color:#b9d4d0;max-width:380px;font-size:15px}
+.sheet{margin-top:-54px;position:relative}
+.seg{position:relative;display:grid;grid-template-columns:1fr 1fr;background:var(--cd);border:1px solid var(--ln);border-radius:99px;padding:5px;box-shadow:0 8px 28px #0b2a2d1f}
+.seg b{position:absolute;top:5px;bottom:5px;inset-inline-start:5px;width:calc(50% - 5px);border-radius:99px;background:var(--pr);transition:transform .35s cubic-bezier(.3,.9,.3,1);transform:translateX(calc(var(--i,0)*-100%))}
+.seg button{position:relative;z-index:1;border:0;background:none;font:800 15px Vazirmatn,Tahoma,sans-serif;color:var(--mu);padding:10px 0;border-radius:99px;cursor:pointer;transition:color .25s;display:flex;gap:8px;justify-content:center;align-items:center}
+.seg button[aria-selected=true]{color:#fff}
+.seg svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.pane{display:none;margin-top:22px}.pane.on{display:block;animation:pi .35s both}
+@keyframes pi{from{opacity:0;transform:translateY(8px)}}
+.main{background:var(--pr);color:#fff;border-radius:26px;padding:22px 20px;display:flex;flex-direction:column;gap:6px}
+.main small{color:#bfece6;font-size:13px}
+.main h2{margin:0;font-size:21px;line-height:1.5}
+.main p{margin:0 0 10px;color:#d4f1ed;font-size:14px;line-height:1.9}
+.go{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--ac);color:#06312d;font:800 16px Vazirmatn,Tahoma,sans-serif;border:0;text-decoration:none;padding:12px 24px;border-radius:99px;cursor:pointer;align-self:flex-start;transition:transform .2s}
+.go:active{transform:scale(.97)}
+.hint{display:none;margin-top:8px;font-size:13px;color:#d4f1ed;background:#0000002e;border-radius:14px;padding:8px 12px}
+.hint.on{display:block}
+.alt{margin-top:14px;background:var(--cd);border:1px solid var(--ln);border-radius:26px;overflow:hidden}
+.alt h3{margin:0;padding:14px 20px 4px;font-size:14px;color:var(--mu);font-weight:600}
+.opt{display:flex;align-items:center;gap:14px;padding:14px 20px;border-top:1px solid var(--ln);text-decoration:none}
+.opt:first-of-type{border-top:0}
+.opt .ic{flex:none;width:42px;height:42px;border-radius:14px;display:grid;place-items:center;background:var(--soft);color:var(--pr)}
+.opt .ic svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.opt .t{flex:1;line-height:1.5}.opt .t small{display:block;color:var(--mu);font-size:12.5px}
+.opt .t b{font-weight:800}
+.st{font-size:12px;font-weight:800;padding:3px 12px;border-radius:99px;background:var(--soft);color:var(--pr);white-space:nowrap}
+.opt.off{opacity:.62;cursor:default}.opt.off .st{background:transparent;border:1px dashed var(--mu);color:var(--mu)}
+.steps{margin:0;padding:0;list-style:none;background:var(--cd);border:1px solid var(--ln);border-radius:26px;counter-reset:s}
+.steps li{counter-increment:s;display:flex;gap:14px;padding:16px 20px;border-top:1px solid var(--ln)}
+.steps li:first-child{border-top:0}
+.steps li::before{content:counter(s,persian);flex:none;width:30px;height:30px;border-radius:50%;background:var(--pr);color:#fff;font-weight:800;display:grid;place-items:center;font-size:14px;margin-top:2px}
+.steps b{font-weight:800}.steps small{display:block;color:var(--mu);font-size:13px;line-height:1.8}
+.steps svg{width:18px;height:18px;vertical-align:-4px;fill:none;stroke:var(--pr);stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.ios-top{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+.ghost{flex:1;min-width:150px;text-align:center;background:var(--cd);border:1px solid var(--ln);color:var(--tx);font:800 14px Vazirmatn,Tahoma,sans-serif;padding:11px 14px;border-radius:99px;cursor:pointer;text-decoration:none}
+.foot{text-align:center;color:var(--mu);font-size:13px;margin:26px 0 40px}
+.foot a{color:var(--pr);font-weight:800;text-decoration:none}
+button:focus-visible,a:focus-visible{outline:3px solid var(--ac);outline-offset:2px}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<header class="top"><div class="w"><a class="brand" href="./"><i><svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="40" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-dasharray="190 62" transform="rotate(-60 60 60)"/><g transform="rotate(45 60 60)"><rect x="50" y="36" width="20" height="48" rx="10" fill="currentColor" opacity=".5"/><path d="M50 60V46a10 10 0 0 1 20 0V60Z" fill="currentColor"/></g></svg></i>فارماشیفت</a><a class="back" href="./">بازگشت به سایت</a></div></header>
+
+<div class="hero"><div class="w"><h1>فارماشیفت رو روی گوشیت داشته باش</h1><p>نصبش چند ثانیه طول می‌کشه و مثل یه اپ معمولی روی صفحه‌ی اصلی گوشیت می‌شینه.</p></div></div>
+
+<main class="w sheet">
+<div class="seg" id="seg" role="tablist">
+  <b></b>
+  <button role="tab" id="t-and" aria-selected="true" data-p="and"><svg viewBox="0 0 24 24"><path d="M7 9h10v8a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2zM8 6l-1.5-2M16 6l1.5-2M7.5 9a4.5 4.5 0 0 1 9 0"/></svg>اندروید</button>
+  <button role="tab" id="t-ios" aria-selected="false" data-p="ios"><svg viewBox="0 0 24 24"><path d="M12 7c1-1.5 2.5-2 3.5-2 0 1.5-.8 3-2 3.5M8 8.5c-2 0-3.5 2-3.5 4.5 0 3 2 6 4 6 1 0 1.5-.5 3-.5s2 .5 3 .5c1.5 0 3-2 3.5-3.5-2-.8-2.5-4 0-5.5-1-1.2-2-1.5-3-1.5-1.5 0-2 .7-3.5.7S9.5 8.5 8 8.5z"/></svg>آیفون</button>
+</div>
+
+<!-- Android -->
+<section class="pane on" id="p-and" role="tabpanel">
+  <div class="main">
+    <small>سریع‌ترین راه</small>
+    <h2>نصب وب‌اپ فارماشیفت</h2>
+    <p>بدون فروشگاه و بدون دانلود فایل. اپ همین الان نصب می‌شه و آیکنش کنار بقیه‌ی برنامه‌هات می‌شینه.</p>
+    <button class="go" id="installBtn">نصب روی گوشی</button>
+    <div class="hint" id="hint">اگه پنجره‌ی نصب باز نشد: اپ رو توی Chrome باز کن، منوی ⋮ بالای صفحه رو بزن و «نصب برنامه» یا «افزودن به صفحه اصلی» رو انتخاب کن.</div>
+  </div>
+  <div class="alt">
+    <h3>راه‌های دیگه</h3>
+    <a class="opt off" data-k="apk"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 4v10M8 10l4 4 4-4M5 19h14"/></svg></span><span class="t"><b>دانلود مستقیم</b><small>فایل نصب (APK)</small></span><span class="st">به‌زودی</span></a>
+    <a class="opt off" data-k="bazaar"><span class="ic"><svg viewBox="0 0 24 24"><path d="M5 9h14l-1.2 9.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8zM9 9V7a3 3 0 0 1 6 0v2"/></svg></span><span class="t"><b>کافه‌بازار</b><small>نصب از فروشگاه</small></span><span class="st">به‌زودی</span></a>
+    <a class="opt off" data-k="myket"><span class="ic"><svg viewBox="0 0 24 24"><path d="M5 18V8l7 6 7-6v10"/></svg></span><span class="t"><b>مایکت</b><small>نصب از فروشگاه</small></span><span class="st">به‌زودی</span></a>
+  </div>
+</section>
+
+<!-- iOS -->
+<section class="pane" id="p-ios" role="tabpanel">
+  <ol class="steps">
+    <li><span><b>اپ رو توی Safari باز کن</b><small>باید حتماً Safari باشه؛ از داخل اینستاگرام یا تلگرام نصب نمی‌شه.</small></span></li>
+    <li><span><b>دکمه‌ی اشتراک‌گذاری رو بزن</b><small>آیکن <svg viewBox="0 0 24 24"><path d="M12 15V4M8 8l4-4 4 4M6 12v7h12v-7"/></svg> پایین صفحه (یا بالا، توی iPad)</small></span></li>
+    <li><span><b>«Add to Home Screen» رو انتخاب کن</b><small>اگه پیداش نکردی، لیست رو کمی بالا بکش. آیکنش یه مربع با علامت <svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="4"/><path d="M12 8v8M8 12h8"/></svg> داره.</small></span></li>
+    <li><span><b>«Add» رو بزن و تمام</b><small>فارماشیفت مثل یه اپ معمولی روی صفحه‌ی اصلی‌ات اضافه می‌شه.</small></span></li>
+  </ol>
+  <div class="ios-top">
+    <a class="ghost js-app" href="#">باز کردن در Safari</a>
+    <button class="ghost" id="copyBtn">کپی لینک اپ</button>
+  </div>
+</section>
+
+<p class="foot">قبلاً نصب کردی؟ <a class="js-app" href="#">ورود به فارماشیفت</a></p>
+</main>
+
+<script>
+var APP_URL="https://app.pharmashift.ir";
+// وقتی هر کدوم از این لینک‌ها آماده شد اینجا بذار؛ کارت از «به‌زودی» درمیاد و فعال می‌شه
+var LINKS={apk:"",bazaar:"",myket:""};
+var ST={apk:"دانلود",bazaar:"نصب",myket:"نصب"};
+document.querySelectorAll('.js-app').forEach(function(a){a.href=APP_URL});
+document.querySelectorAll('.opt[data-k]').forEach(function(a){var u=LINKS[a.dataset.k];if(u){a.href=u;a.classList.remove('off');a.querySelector('.st').textContent=ST[a.dataset.k];a.target="_blank";a.rel="noopener"}});
+
+var seg=document.getElementById('seg');
+function show(p){
+  seg.style.setProperty('--i',p==='ios'?1:0);
+  seg.querySelectorAll('button').forEach(function(b){b.setAttribute('aria-selected',b.dataset.p===p)});
+  document.getElementById('p-and').classList.toggle('on',p==='and');
+  document.getElementById('p-ios').classList.toggle('on',p==='ios');
+}
+seg.querySelectorAll('button').forEach(function(b){b.onclick=function(){show(b.dataset.p)}});
+if(/iPhone|iPad|iPod/i.test(navigator.userAgent))show('ios');
+
+var dp=null,btn=document.getElementById('installBtn'),hint=document.getElementById('hint');
+window.addEventListener('beforeinstallprompt',function(e){e.preventDefault();dp=e});
+btn.onclick=function(){
+  if(dp){dp.prompt();dp.userChoice.then(function(){dp=null});}
+  else{hint.classList.add('on');setTimeout(function(){window.open(APP_URL,'_blank')},900)}
+};
+document.getElementById('copyBtn').onclick=function(){
+  var b=this;
+  function ok(){b.textContent='کپی شد ✓';setTimeout(function(){b.textContent='کپی لینک اپ'},1800)}
+  if(navigator.clipboard)navigator.clipboard.writeText(APP_URL).then(ok,function(){prompt('لینک رو کپی کن:',APP_URL)});
+  else prompt('لینک رو کپی کن:',APP_URL);
+};
+</script>
+</body>
+</html>
